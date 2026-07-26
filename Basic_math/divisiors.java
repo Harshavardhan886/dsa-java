@@ -28,3 +28,5 @@ class divisiors{
         }
     }
 }
+
+// the out put for the second function isnt sorted pls do it.

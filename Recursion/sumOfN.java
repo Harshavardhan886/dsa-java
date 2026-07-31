@@ -21,7 +21,7 @@ sumation(n-1, sum+n);
 }
 
 public static int sumation2(int n){
-     // Functional way with out multiple parameters.
+     // Functional way.
     if(n==0){
         return 0;
     }

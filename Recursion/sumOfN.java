@@ -20,6 +20,7 @@ public static void sumation(int n, int sum){
 sumation(n-1, sum+n);
 }
 
+
 public static int sumation2(int n){
      // Functional way.
     if(n==0){

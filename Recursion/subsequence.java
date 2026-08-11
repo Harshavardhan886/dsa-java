@@ -1,25 +1,25 @@
 import java.util.*;
 public class subsequence {
-    public static void main(String[] args) {
-        int[] arr = {3, 1, 2};
-        List<Integer> current = new ArrayList<>();
-        f(0, arr, current);
-    }
 
-    // recursive function
-    static void f(int index, int[] arr, List<Integer> current) {
-        if(index == arr.length) {
-            System.out.println(current); // print one subsequence
+    
+    static int[] arr = {3, 1, 2};   // Class variable
+    static void findSubsequences(int index, ArrayList<Integer> list) {
+
+        if (index == arr.length) {
+            System.out.println(list);
             return;
         }
 
-        // include arr[index]
-        current.add(arr[index]);
-        f(index + 1, arr, current);
+        list.add(arr[index]);
+        findSubsequences(index + 1, list);
 
-        // exclude arr[index]
-        current.remove(current.size() - 1);
-        f(index + 1, arr, current);
+        list.remove(list.size() - 1);
+        findSubsequences(index + 1, list);
     }
 
+    public static void main(String[] args) {
+        findSubsequences(0, new ArrayList<>());
+    }
 }
+
+

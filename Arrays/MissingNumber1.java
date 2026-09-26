@@ -3,7 +3,7 @@
 /*
 public class MissingNumber1 {
     public static void main(String[] args) {
-        int[] arr = {1,2,4,5};
+        int[] arr = {1,2,4,5};                       // works for non sorted array also
        for(int i = 1; i<arr.length; i++){
            int flag = 0;
            for(int j = 0; j<arr.length-1; j++){
@@ -22,7 +22,7 @@ public class MissingNumber1 {
 
 class MissingNumber1{
      public static void main(String[] args) {
-       int[] arr = {1,2,4,5};
+       int[] arr = {1,2,4,5};                           // works only for the sorted array
         int j= 1;
         for(int i = 0; i<arr.length; i++){
            if(arr[i] != j){

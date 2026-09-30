@@ -18,6 +18,7 @@ public class MissingNumber2 {
 
 // Method3: Optimal solution (using sum and XOR)
 // This method only works for the sorted array, for unsorted array we just need to find the max num in diff method.
+/*
 class MissingNumber2{
      public static void main(String[] args) {
         int[] arr = {1,2,4,5};
@@ -31,4 +32,18 @@ class MissingNumber2{
         
     }
 }
-// XOR METHOD IS STILL THERE TO LEARN
+ */
+// XOR METHOD 
+
+class MissingNumber2{
+    	public static void main(String[] args) {
+		int[] arr = {1,2,4,5};
+		int xor1 = 0, xor2 = 0;
+		for(int i = 0; i<arr.length; i++){
+		    xor1 ^= arr[i];
+		    xor2 ^= (i+1);
+		}
+		xor2 ^= (arr.length + 1);
+		System.out.println(xor1^xor2);
+	}
+}

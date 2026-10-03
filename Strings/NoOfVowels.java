@@ -16,3 +16,5 @@ public class NoOfVowels {
        sc.close();
     }
 }
+
+// or even we could print it as str.charAt(i);
